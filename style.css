@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+html {
+    font-size: 62.5%;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(30, 38%, 92%);
+    font-size: 1.4rem;
+}
+
+.card {
+    max-width: 60rem;
+    max-height: 40rem;
+    margin: 8% auto;
+    display: flex;
+}
+
+.card__image {
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: 30rem;
+    width: 30rem;
+    height: 40rem;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.card__info {
+    background-color: white;
+    padding: 3rem;
+    padding-top: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    width: 25rem
+}
+
+.card__info--type {
+    text-transform: capitalize;
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat';
+    letter-spacing: .5rem;
+}
+
+.card__info--title {
+    font-size: 3rem;
+    line-height: 2.7rem;
+    font-family: 'Fraunces';
+    font-weight: 700;
+    letter-spacing: -0.1rem;
+}
+
+.card__info--description {
+    font-family: 'Montserrat';
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 0;
+    line-height: 2rem;
+}
+
+.card__info__prices {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+}
+
+.card__info__prices--new {
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces';
+    font-size: 3rem;
+}
+
+.card__info__prices--old {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    padding-left: 2rem;
+    font-family: 'Montserrat';
+}
+
+.card__info--buy {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1.5rem 0;
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    border-radius: .5rem;
+    color: white;
+    font-family: 'Montserrat';
+    text-align: center;
+    vertical-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    transition: background-color .2s;
+}
+
+.card__info--buy:hover {
+    cursor: pointer;
+    background-color: hsl(147, 44%, 49%);
+}
+
+.card__info--buy:active {
+    transform: translateY(.1rem);
+}
+
+.card__info--buy:focus {
+    background-color: hsl(150, 1%, 40%);
+    
+}
+
+@media (max-width: 624px) {
+    .card {
+        max-width: 35rem;
+        max-height: 60rem;
+        margin: 2rem auto 6rem;
+        flex-direction: column;
+    }
+    
+    .card__image {
+        background-image: url(images/image-product-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 34rem;
+        height: 40rem;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0;
+    }
+    
+    .card__info {
+        width: 30rem;
+        background-color: white;
+        padding: 2rem;
+        padding-top: 1rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        border-top-right-radius: 0;
+        margin-top: -.5rem;
+}
